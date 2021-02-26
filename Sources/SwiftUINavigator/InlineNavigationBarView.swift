@@ -37,6 +37,7 @@ public struct InlineNavigationBarView<TitleView: View, LeadingView: View, Traili
                 Spacer().frame(height: 0)
                 content
             }
+            .navigationBarHidden(true)
         }
     }
 }
