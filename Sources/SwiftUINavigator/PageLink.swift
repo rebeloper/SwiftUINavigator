@@ -8,6 +8,7 @@
 import SwiftUI
 
 public struct PageLink<Destination: View>: View {
+    
     @Binding private var isActive: Bool
     private let destination: () -> Destination
     
