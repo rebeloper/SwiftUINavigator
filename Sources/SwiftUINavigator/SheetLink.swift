@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-@available(iOS 14.0, *)
 public struct SheetLink<Destination: View>: View {
     
     @State private var isPresented = false

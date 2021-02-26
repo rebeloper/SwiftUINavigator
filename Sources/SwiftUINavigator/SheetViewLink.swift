@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-@available(iOS 14.0, *)
 public struct SheetViewLink<Destination: View>: View {
     
     @Binding private var isActive: Bool

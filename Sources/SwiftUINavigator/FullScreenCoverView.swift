@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-@available(iOS 14.0, *)
 public struct FullScreenCoverView<Destination: View, Label: View>: View {
     
     @Binding private var isActive: Bool

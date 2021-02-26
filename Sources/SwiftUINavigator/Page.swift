@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-@available(iOS 14.0, *)
 public struct Page<Destination: View, Label: View>: View {
     
     private var destination: () -> Destination

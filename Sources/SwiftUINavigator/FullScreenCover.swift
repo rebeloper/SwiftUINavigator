@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-@available(iOS 14.0, *)
 public struct FullScreenCover<Destination: View, Label: View>: View {
     
     @State private var isPresented = false

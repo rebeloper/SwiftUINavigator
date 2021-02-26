@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-@available(iOS 14.0, *)
 public struct PageLink<Destination: View>: View {
     @Binding private var isActive: Bool
     private let destination: () -> Destination
