@@ -13,6 +13,10 @@ public struct NavigationBarBackView<Content: View>: View {
     
     private let content: () -> Content
     
+    public init(content: @escaping () -> Content) {
+        self.content = content
+    }
+    
     public var body: some View {
         Button(action: {
             presentationMode.wrappedValue.dismiss()
