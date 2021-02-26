@@ -42,6 +42,7 @@ public struct LargeNavigationBarView<TitleView: View, LeadingView: View, Trailin
                 Spacer().frame(height: 0)
                 content.frame(width: proxy.size.width)
             }
+            .navigationBarHidden(true)
         }
     }
 }

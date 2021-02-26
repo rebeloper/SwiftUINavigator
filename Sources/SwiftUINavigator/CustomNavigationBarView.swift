@@ -23,6 +23,7 @@ public struct CustomNavigationBarView<TitleView: View, BackgroundView: View, Con
                 Spacer().frame(height: 0)
                 content
             }
+            .navigationBarHidden(true)
         }
     }
 }
