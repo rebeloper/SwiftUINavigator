@@ -1,5 +1,5 @@
 //
-//  NavigationBarBackView.swift
+//  DismissView.swift
 //  
 //
 //  Created by Alex Nagy on 26.02.2021.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public struct NavigationBarBackView<Content: View>: View {
+public struct DismissView<Content: View>: View {
     
     @Environment(\.presentationMode) private var presentationMode
     
