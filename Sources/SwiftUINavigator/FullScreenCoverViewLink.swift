@@ -1,5 +1,5 @@
 //
-//  SheetView.swift
+//  FullScreenCoverViewLink.swift
 //  
 //
 //  Created by Alex Nagy on 26.02.2021.
@@ -7,29 +7,30 @@
 
 import SwiftUI
 
-@available(iOS 14.0, *)
-public struct SheetView<Destination: View, Label: View>: View {
+public struct FullScreenCoverViewLink<Destination: View>: View {
     
     @Binding private var isActive: Bool
     private let destination: () -> Destination
     private let onDismiss: (() -> Void)?
-    private let label: () -> Label
     
-    public init(isActive: Binding<Bool>, destination: @escaping () -> Destination, onDismiss: (() -> Void)? = nil, label: @escaping () -> Label) {
+    public init(isActive: Binding<Bool>, destination: @escaping () -> Destination, onDismiss: (() -> Void)? = nil) {
         self._isActive = isActive
         self.destination = destination
         self.onDismiss = onDismiss
-        self.label = label
     }
     
     public var body: some View {
         Button {
             isActive.toggle()
         } label: {
-            label()
+            EmptyView()
         }
-        .sheet(isPresented: $isActive, onDismiss: onDismiss) {
+        .fullScreenCover(isPresented: $isActive, onDismiss: onDismiss) {
             destination()
         }
+
     }
 }
+
+
+

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-@available(iOS 13.0, *)
+@available(iOS 14.0, *)
 public struct SheetViewLink<Destination: View>: View {
     
     @Binding private var isActive: Bool
@@ -29,7 +29,6 @@ public struct SheetViewLink<Destination: View>: View {
         .sheet(isPresented: $isActive, onDismiss: onDismiss) {
             destination()
         }
-
     }
 }
 

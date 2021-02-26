@@ -1,5 +1,5 @@
 //
-//  SheetView.swift
+//  FullScreenCoverView.swift
 //  
 //
 //  Created by Alex Nagy on 26.02.2021.
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @available(iOS 14.0, *)
-public struct SheetView<Destination: View, Label: View>: View {
+public struct FullScreenCoverView<Destination: View, Label: View>: View {
     
     @Binding private var isActive: Bool
     private let destination: () -> Destination
@@ -28,8 +28,10 @@ public struct SheetView<Destination: View, Label: View>: View {
         } label: {
             label()
         }
-        .sheet(isPresented: $isActive, onDismiss: onDismiss) {
+        .fullScreenCover(isPresented: $isActive, onDismiss: onDismiss) {
             destination()
         }
     }
 }
+
+

@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-@available(iOS 13.0, *)
-public struct Page<Label: View, Destination: View>: View {
+@available(iOS 14.0, *)
+public struct Page<Destination: View, Label: View>: View {
     
     private var destination: () -> Destination
     private var label: () -> Label

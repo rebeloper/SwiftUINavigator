@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-@available(iOS 13.0, *)
-public struct Sheet<Label: View, Destination: View>: View {
+@available(iOS 14.0, *)
+public struct Sheet<Destination: View, Label: View>: View {
     
     @State private var isPresented = false
     
